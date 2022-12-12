@@ -12,21 +12,21 @@ Each NFT owned counts as 1 vote. if majority of voters vote for the proposal by 
 
 <figure>
 <img src="./my-app/public/demo1.PNG" alt="demo1" style="width:100%">
-<p align="center">Fig.1 - User with no NFT Create Proposal</p>
+<p align="center">Fig.1 - Home Page</p>
 </figure>
 
 <br/>
 
 <figure>
 <img src="./my-app/public/demo2.PNG" alt="demo1" style="width:100%">
-<p align="center">Fig.2 - User with NFT Create Proposal</p>
+<p align="center">Fig.2 - After Adding Liquidity</p>
 </figure>
 
 <br/>
 
 <figure>
 <img src="./my-app/public/demo3.PNG" alt="demo1" style="width:100%">
-<p align="center">Fig.3 - View Proposal Tab</p>
+<p align="center">Fig.3 - Swap Tab</p>
 </figure>
 
 ## Project Setup
