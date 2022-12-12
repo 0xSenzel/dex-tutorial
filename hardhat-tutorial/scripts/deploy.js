@@ -14,7 +14,7 @@ async function main() {
   const deployedExchangeContract = await exchangeContract.deploy(
     cryptoDevTokenAddress
   );
-  await deployedExchangeContract.deployed();
+  await deployedExchangeContract.deployed(); //0x30B6d4c47ca82D398c7aEaaD171f4aFCc985ff28
 
   // print the address of the deployed contract
   console.log("Exchange Contract Address:", deployedExchangeContract.address);

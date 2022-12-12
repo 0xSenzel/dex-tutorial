@@ -1,19 +1,83 @@
-# LearnWeb3 
-This repo contains [LearnWeb3](https://learnweb3.io/) project material completed by [0xsenzel](https://github.com/0xSenzel/) sophomore stage.
+# Build your own Decentralized Exchange like Uniswap
 
-## Syallabus
-LearnWeb3 separated its teaching into 4 stages:
-- [Freshman](https://learnweb3.io/courses/9a3fafe4-b5eb-4329-bdef-97b2aa6aacc1)
-- [Sophomore](https://learnweb3.io/courses/c1d7081b-63a9-4c6e-b35c-9fcbbad418b2)
-- [Junior](https://learnweb3.io/courses/6394ea7c-0ad6-4a4a-879f-7f9756bc5976)
-- [Senior](https://learnweb3.io/courses/c446d19f-a25d-42c6-b3e4-4311c5040587)
+This repo contains coursework project from [LearnWeb3](https://learnweb3.io/) completed by [0xsenzel](https://github.com/0xSenzel/) for [LearnWeb3DAO-Sophomore](https://learnweb3.io/courses/c1d7081b-63a9-4c6e-b35c-9fcbbad418b2) lesson.
 
-## Homework Solution
-|Projects|
-|---|
-|[Whitelist-Dapp](https://github.com/0xSenzel/Whitelist-Dapp)|
-|[NFT-Collection](https://github.com/0xSenzel/nft-collection)|
-|[ICO](https://github.com/0xSenzel/ico)|
-|[DAO-tutorial](https://github.com/0xSenzel/dao-tutorial)|
-|[DEX-tutorial](https://github.com/0xSenzel/dex-tutorial)|
+## Project Info
 
+DAO give NFT holders purchased from [NFT Collection](https://0xsenzel-nft-collection.vercel.app/) to create and vote on proposals to use DAO treasury to purchase other NFT from an NFT marketplace.
+
+Each NFT owned counts as 1 vote. if majority of voters vote for the proposal by the deadline, NFT purchase is automatically executed.
+
+## Project Demo
+
+<figure>
+<img src="./my-app/public/demo1.PNG" alt="demo1" style="width:100%">
+<p align="center">Fig.1 - User with no NFT Create Proposal</p>
+</figure>
+
+<br/>
+
+<figure>
+<img src="./my-app/public/demo2.PNG" alt="demo1" style="width:100%">
+<p align="center">Fig.2 - User with NFT Create Proposal</p>
+</figure>
+
+<br/>
+
+<figure>
+<img src="./my-app/public/demo3.PNG" alt="demo1" style="width:100%">
+<p align="center">Fig.3 - View Proposal Tab</p>
+</figure>
+
+## Project Setup
+
+### Hardhat
+
+Head to [hardhat-tutorial](./hardhat-tutorial/) folder:
+
+Install dependencies
+
+```
+npm install
+```
+
+Compile smart contract
+
+```
+npx hardhat compile
+```
+
+To deploy smart contracts: <br/>
+Head to [hardhat.config.js](./hardhat-tutorial/hardhat.config.js) file, change the value of:
+
+- `ALCHEMY_HTTP_URL` with your own Ethereum Network API
+- `PRIVATE_KEY` with your Ethereum wallet's private key
+- `API_KEY` with your Etherscan's API Key
+
+Then run the following command.
+
+```
+npx hardhat run scripts/deploy.js --network goerli
+npx hardhat verify --network goerli YOUR_SMARTCONTRACT_ADDRESS "CONSTRUCTOR ARG1" "CONSTRUCTOR ARG2"
+```
+
+### React & Next Js
+
+Head to [my-app](./my-app/) folder:
+
+```
+npm install
+```
+
+Replace the variable inside [this folder](./my-app/constants/index.js):
+
+- `TOKEN_CONTRACT_ADDRESS` with compiled ABI of [ICO](https://0xsenzel-ico.vercel.app/) contract.
+- `TOKEN_CONTRACT_ABI` with deployed contract of [ICO](https://0xsenzel-ico.vercel.app/) contract.
+- `EXCHANGE_CONTRACT_ADDRESS` with deployed contract of this contract
+- `EXCHANGE_CONTRACT_ABI ` with compiled ABI of this contract
+
+To run the app locally:
+
+```
+npm run dev
+```
