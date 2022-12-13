@@ -4,9 +4,7 @@ This repo contains coursework project from [LearnWeb3](https://learnweb3.io/) co
 
 ## Project Info
 
-DAO give NFT holders purchased from [NFT Collection](https://0xsenzel-nft-collection.vercel.app/) to create and vote on proposals to use DAO treasury to purchase other NFT from an NFT marketplace.
-
-Each NFT owned counts as 1 vote. if majority of voters vote for the proposal by the deadline, NFT purchase is automatically executed.
+Simulates Uniswap. Collects 1% fee for each swap. DEX also allows users to add liquidity of token minted from our ICO Dapp and ETH. Users will be given Crypto Dev LP tokens (Liquidity Provider Tokens).
 
 ## Project Demo
 
